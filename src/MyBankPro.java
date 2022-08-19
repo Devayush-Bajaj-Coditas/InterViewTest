@@ -3,26 +3,27 @@ import java.util.Scanner;
 
 class MyBankOperations {
     float bankBalance;
-    int user_selection;
-    String name, address;
+    int user_selection =7;
+    String name, address,companyName;
     long phone_no, account_no;
+
     Scanner scannerInput = new Scanner(System.in);
     void menu_Input_From_User() {
         System.out.println("How may I help you :- ");
         System.out.println("0) Exit\n" +
                 "1) Add a bank account - Type Current / Savings [accountType]\n" +
                 "2) Deposit amount\n" +
-                "3) WWithdraw amount\n" +
+                "3) Withdraw amount\n" +
                 "4) Display all account details\n Enter: ");
         user_selection = scannerInput.nextInt();
     }
 
     void bank_operations() {
-        //while (user_selection == 0) {
+
             switch (user_selection) {
+
                 case 0:
                     System.out.println("Thank you for using our services");
-                    user_selection = 7;
                     break;
 
                 case 1:     //Add a bank account
@@ -42,10 +43,9 @@ class MyBankOperations {
                         System.out.println(account_no);
                     } else
                         System.out.println("Enter your company name : ");
-                    String company_name = scannerInput.next();
+                    companyName= scannerInput.next();
                     break;
                 case 2:
-
                     System.out.println("Enter amount you want to Deposit : ");
                     float diposit_Amount = scannerInput.nextInt();
                     bankBalance = bankBalance + diposit_Amount;
@@ -74,8 +74,8 @@ class MyBankOperations {
                     );
 
             }
-        }
-    //}
+
+    }
 }
     public  class MyBankPro {
         public static void main(String[] args) {
