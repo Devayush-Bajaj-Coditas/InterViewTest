@@ -34,6 +34,13 @@ StudentOperations studentOperations = new StudentOperations();
         spp.city = null;
     }
     void fetch(){
+        Student spp = new Student();
+        System.out.println("Student Details Are: ");
+        for(int i =0 ; i< student.length -1 ; i++){
+            System.out.println("Name = "  +spp.firstName + " " + "Last Name  :" + spp.lastName
+            + "City " + spp.city + "Track "  +spp.trackStack);
+                break;
+            }
 
     }
     void exit(){
