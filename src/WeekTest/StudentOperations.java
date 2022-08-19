@@ -21,11 +21,17 @@ StudentOperations studentOperations = new StudentOperations();
     void remove(){
         System.out.println("Enter id which you want to remove");
         int removeId= s.nextInt();
+        Student spp = new Student();
         for(int i =0 ; i< student.length -1 ; i++){
-            if(student[0].equals(removeId)){
-
+            if(student[i].equals(removeId)){
+              spp=student[i];
+              break;
             }
         }
+        spp.id = 0;
+        spp.firstName = null;
+        spp.lastName =null;
+        spp.city = null;
     }
     void fetch(){
 
